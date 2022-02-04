@@ -6,6 +6,7 @@ $user = new user();
 
 echo user::MAX_INSTANCES;
 
+$user->parseRequest();
 
 
 

@@ -5,7 +5,7 @@ require('interfaces/UserInterface.php');
 class user implements UserInterface
 {
 
-    private $request;
+    private array $request;
 
     public function __construct() {
         $this->getRequest($_REQUEST);
@@ -13,5 +13,13 @@ class user implements UserInterface
 
 
 
+    public function getRequest(array $request):void
+    {
+        $this->request = $request;
+    }
 
+    public function parseRequest():void
+    {
+        var_dump($this->request);
+    }
 }
