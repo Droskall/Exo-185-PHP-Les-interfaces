@@ -11,8 +11,6 @@ class user implements UserInterface
         $this->getRequest($_REQUEST);
     }
 
-
-
     public function getRequest(array $request):void
     {
         $this->request = $request;
